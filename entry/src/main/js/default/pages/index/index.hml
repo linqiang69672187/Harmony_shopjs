@@ -19,7 +19,7 @@
                              </text>
                              <text class="todo-price">
                                  <span>
-                                     元
+                                     ￥
                                  </span>
                                  <span>
                                      {{$item.price}}
