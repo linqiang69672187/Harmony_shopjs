@@ -1,0 +1,41 @@
+<div class="container">
+ <div class="container" id="target">
+    <search hint="{{pageWord.searchKeyWord}}" value="{{pageWord.searchValue}}" focusable="true"  @submit="submitColumn"></search>
+ <tabs class="tabs" index="0" vertical="false" @change="tabchange">
+    <tab-bar class="tab-bar" mode="fixed">
+     <text class="tab-text" for="{{item in titleList}}">{{item}}</text>
+    </tab-bar>
+     <tab-content class="tab-content" scrollable="true">
+         <div class="item-content" for="{{ item in contentList}}">
+             <list class="todo-wraper">
+                 <list-item for="{{allList}}" >
+                     <div class="margin-comm" >
+                         <div class="todo-total">
+                             <text class="todo-title">
+                                 {{$item.title}}
+                             </text>
+                             <text class="todo-content">
+                                 {{$item.content}}
+                             </text>
+                             <text class="todo-price">
+                                 <span>
+                                     元
+                                 </span>
+                                 <span>
+                                     {{$item.price}}
+                                 </span>
+                             </text>
+                         </div>
+                         <div class="width-comm">
+                             <image src="{{$item.imgSrc}}" class="container-home-image">
+                             </image>
+                         </div>
+                     </div>
+                 </list-item>
+             </list>
+         </div>
+     </tab-content>
+ </tabs>
+
+ </div>
+</div>
